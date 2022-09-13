@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Meu formulário</title>
+        <script type="text/javascript" src="jquery.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <nav class="nav-index">
+            <ul style="margin-left: 20px; list-style-type: none;">
+                <li style="margin: 15px;"><a style="text-decoration: none; color: rgb(190, 150, 255);" href="index.html">Página inicial</a></li>
+                <li style="margin: 15px;"><a style="text-decoration: none; color: rgb(190, 150, 255);" href="formulario.html">Formulário</a></li>
+                <li style="margin: 15px;"><a style="text-decoration: none; color: rgb(190, 150, 255);" href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+
+        <form>
+            <fieldset>
+                <legend>Meu formulário</legend>
+                <div><input required type="text" id="nome" name="nome" placeholder="Digite o seu nome completo" onchange="show()"></div>
+                <div><input required type="text" id="email" name="email" placeholder="Digite seu E-mail" onchange="e_mail()"></div>
+                <div>
+                    <select name="lista" class="lista">
+                        <option disabled selected>Qual sua idade?</option>
+                        <option value="20">20</option>
+                        <option value="25+">25+</option>
+                        <option value="40+">40+</option>
+                    </select>
+                </div>
+                <div class="bottom">
+                    <button  id="botao" value="Enviar" type="button" onclick="bota()">Enviar</button>
+                </div><!-- /.bottom -->
+            </fieldset>
+        </form>
+        <footer>
+        </footer>
+    </body>
+</html>
