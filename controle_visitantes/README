@@ -1,0 +1,4 @@
+1- Instale as dependencias do arquivo requirements.txt (COMANDO - pip install -r requirements.txt )
+2- rode o serviço (COMANDO - python manage.py runserver)
+3 - Acesse http://127.0.0.1:8000/
+4 - credenciais de acesso. Email - renangarcia@gmail.com | senha - controle
