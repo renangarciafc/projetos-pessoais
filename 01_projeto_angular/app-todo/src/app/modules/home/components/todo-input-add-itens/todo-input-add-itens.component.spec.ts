@@ -20,4 +20,10 @@ describe('TodoInputAddItensComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('testando função soma', () => {
+    expect(component).toBeTruthy();
+    component = fixture.componentInstance;
+    expect(component).toEqual();
+  });
 });
