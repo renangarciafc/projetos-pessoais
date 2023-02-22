@@ -1,0 +1,61 @@
+<body *ngIf="!init_form">
+    <!-- Div responsável por fazer todas as abordagens do questionário -->
+    <div class="question">
+        <!-- texto de boas vindas ao usuário -->
+        <p>
+            É um prazer receber você aqui!!! Nossa missão principal é
+            fazer com que você encontre facilmente pessoas que tenham características
+            e interesses que são importantes pra você!
+        </p>
+
+        <p>
+            Por isso fizemos um sistema de pontuação. Como funciona? Primeiro você responde várias
+            perguntas sobre você. QUANTO MAIS INFORMAÇÕES PREENCHER, MAIS CHANCES DE ENCONTRAR PESSOAS
+            <strong>que combinam contigo!</strong>
+        </p>
+        <!-- formulário responsável por coletar o nome do usuário -->
+        <form>
+            <mat-form-field style="display: inline-block;" appearance="fill">
+                <mat-label>Nome Completo</mat-label>
+                <input matInput [formControl]="name" required>
+                <mat-error *ngIf="name.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+        </form>
+        <!-- botão responsável por ir para a próxima etapa -->
+        <img class="btn btn-primary init-form" (click)="initForm()" src="../../../assets/img/arrow-right-solid.svg">
+        <p class="errorName" *ngIf="errorName">Insira um nome por favor!</p>
+
+        <div class="progress" style="margin-top: 8px;">
+            <div class="progress-bar" role="progressbar" style="width:10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </div>
+</body>
+
+<body *ngIf="init_form">
+ <div class="question" style="padding-top: 30px;">
+    <p>Qual destas atividades físicas você PRATICA ou tem INTERESSE?</p>
+    <p style="text-decoration: underline;">MAIS FREQUENTES</p>
+
+    <form>
+        <p>Academia <input class="form-check-input" type="checkbox" value="academia" [(ngModel)]="academia"></p>
+        <p>Corrida <input class="form-check-input" type="checkbox" value="corrida" [(ngModel)]="corrida"></p>
+        <p>Cross-fit <input class="form-check-input" type="checkbox" value="cross-fit" [(ngModel)]="crossFit"></p>
+        <p>Futebol <input class="form-check-input" type="checkbox" value="futebol" [(ngModel)]="futebol"></p>
+        <p>Spinning <input class="form-check-input" type="checkbox" value="spinning" [(ngModel)]="spinning"></p>
+        <p>Vôlei <input class="form-check-input" type="checkbox" value="volei" [(ngModel)]="volei"></p>
+    </form>
+
+    <p style="text-decoration: underline;">OUTRAS OPÇÕES</p>
+
+    <form>
+        <p>Artes Marciais <input class="form-check-input" type="checkbox" value="artes marciais" [(ngModel)]="artesMarciais"></p>
+        <p>Atletismo <input class="form-check-input" type="checkbox" value="atletismo" [(ngModel)]="atletismo"></p>
+        <p>Basquete <input class="form-check-input" type="checkbox" value="basquete" [(ngModel)]="basquete"></p>
+        <div class="progress">
+            <div class="progress-bar" style="width:30%;" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    </form>
+    
+    <img class="btn btn-primary secund-form" style="position: absolute;right: 50px; bottom: 50px;" src="../../../assets/img/arrow-right-solid.svg">
+ </div>
+</body>

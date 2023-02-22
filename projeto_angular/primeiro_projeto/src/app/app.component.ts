@@ -3,12 +3,10 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  <ng-template [ngIf]="getDados">
-    <h1>{{ getDados.nome }}</h1>
-    <h2>{{ getDados.idade }}</h2>
-  </ng-template>
-  <app-login [contador]="addValue" (enviarDados)="setDados($event)"></app-login>
-  <app-index></app-index>
+  <app-reactive-forms></app-reactive-forms>
+  <!-- <app-food-add></app-food-add>
+  <app-food-list></app-food-list> -->
+  <!-- <router-outlet></router-outlet> -->
   `,
   styleUrls: []
 })

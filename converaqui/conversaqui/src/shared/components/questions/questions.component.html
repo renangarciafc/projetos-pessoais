@@ -1,0 +1,16 @@
+<body>
+    <div class="question">
+        <h2>O que você busca?</h2>
+        <div class="amizade">
+            <img src="../../../assets/img/amizade.jpg">
+            <p>Amizade/Comunidades a fins <input class="form-check-input" type="checkbox" value="amizade" [(ngModel)]="amizade"></p>
+        </div>
+
+        <div class="relacionamento">
+            <img src="../../../assets/img/namoro.jpeg">
+            <p>Relacionamento <input class="form-check-input" type="checkbox" value="relacionamento" [(ngModel)]="relacionamento"></p>
+        </div>
+        <button type="button" class="btn btn-primary" (click)="initApp()">COMEÇAR</button>
+        <p class="error" *ngIf="error">Por favor, escolha ao menos uma das opções acima!</p>
+    </div>
+</body>

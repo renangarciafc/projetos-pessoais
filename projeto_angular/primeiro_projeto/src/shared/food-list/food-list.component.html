@@ -1,0 +1,7 @@
+<h3>Lista de lanches</h3>
+<ul *ngIf="foodList.length">
+    <li *ngFor="let item of foodList">
+        {{item.id}}  {{ item.name }} - <input type="text" placeholder="Caso queira alterar o nome digite aqui..." (keyup.enter)="foodListEdit(editValue.value, item.id)" #editValue>
+        <button (click)="foodListDeleteId(item.id)">Delete</button>
+    </li>
+</ul>

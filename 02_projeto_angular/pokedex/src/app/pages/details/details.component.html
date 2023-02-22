@@ -1,0 +1,45 @@
+<app-poke-header></app-poke-header>
+
+<ng-template [ngIf]="isLoading">
+    <main>
+        <section class="pokemon-name">
+            <h1 class="slideInLeft">{{ pokemon[0].name }}</h1>
+            <h2 class="slideInRight">{{ pokemon[1].names[0].name }}</h2>
+        </section>
+
+        <section class="pokemon-status">
+            <img
+            [src]="pokemon[0].sprites.other.dream_world.front_default"
+            [alt]="pokemon[0].name"
+            class="slideInDown"
+            >
+
+            <article class="pokemon-statistic fadeIn">
+                <section>
+                    <h3>Estatísticas</h3>
+
+                    <ol>
+                        <li *ngFor="let value of pokemon[0].stats">
+                            {{ value.stat.name }}
+
+                            <strong>
+                                {{ value.base_stat }}
+                            </strong>
+                        </li>
+                    </ol>
+                </section>
+
+                <a [routerLink]="['']" class="btn btn-secondary"> Voltar</a>
+            </article>
+
+        </section>
+    </main>
+</ng-template>
+
+<main>
+    <img
+    *ngIf="error" src="../../../assets/error.png"
+    alt="Erro no carregamento da página"
+    width="100%"
+    >
+</main>

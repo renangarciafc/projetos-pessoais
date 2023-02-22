@@ -1,0 +1,97 @@
+:host {
+    .list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .pokemon {
+            position: relative;
+            display: flex;
+            width: 42%;
+            height: 117px;
+            min-width:150px;
+            background-color: #fdfdfd;
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 10px;
+
+            .pokemon__status {
+                h2 {
+                    font-size: 22px;
+                    font-weight: bold;
+                    font-style: italic;
+                    margin-bottom: 10px;
+                    text-transform: capitalize;
+                }
+                ul {
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        list-style: none;
+                        background-color: #bebebe;
+                        border-radius: 20px;
+                        margin: 3px;
+                        text-align: center;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .pokemon__image {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                right: 20px;
+                bottom: 20px;
+                background: url(../../../assets/bg/background-list-pokemons.svg) no-repeat;
+                height: 90px;
+                width: 110px;
+
+                img {
+                    height: 80px;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        @media screen and (max-width: 600px) {
+            .pokemon {
+                width: 90%;
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 10px;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        width: 48%;
+        padding: 20px 0;
+        border-radius: 10px;
+
+        text-decoration: none;
+        &:hover {
+            background-color: #fa6d87;
+        }
+    }
+
+    .btn-primary {
+        color: #fff;
+        background: #262835;
+    }
+
+    .btn-secondary {
+        color: #fff;
+        background: #ff5473;
+    }
+}

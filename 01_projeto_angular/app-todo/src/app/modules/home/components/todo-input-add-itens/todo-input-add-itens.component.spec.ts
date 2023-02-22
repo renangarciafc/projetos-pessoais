@@ -22,8 +22,7 @@ describe('TodoInputAddItensComponent', () => {
   });
 
   it('testando função soma', () => {
-    expect(component).toBeTruthy();
     component = fixture.componentInstance;
-    expect(component).toEqual();
+    expect(component.soma(5, 5)).toEqual(10);
   });
 });

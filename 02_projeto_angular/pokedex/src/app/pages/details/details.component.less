@@ -1,0 +1,142 @@
+@import '../../../config-less/variables.less';
+@import '../../../config-less/animation.less';
+
+:host {
+	main {
+		margin-top: 40px 5px;
+
+		.pokemon-name {
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+
+			height: 75px;
+
+			padding: 0 30px;
+
+			h1 {
+				color: #ffffff;
+				font-size: 32px;
+				text-transform: capitalize;
+			}
+
+			h2 {
+				position: absolute;
+				font-weight: 100;
+				top: 0;
+				font-size: 60px;
+				color: rgba(255, 255, 255, 0.1);
+			}
+
+			h1,
+			h2 {
+				//Remove Bug Animation
+				-webkit-animation-fill-mode: none !important;
+				animation-fill-mode: none !important;
+			}
+		}
+
+		.pokemon-status {
+			position: relative;
+
+			img {
+				position: absolute;
+				top: -90px;
+				left: 30px;
+				max-width: 130px;
+				z-index: 10;
+
+				//Remove Bug Animation
+				-webkit-animation-fill-mode: none !important;
+				animation-fill-mode: none !important;
+			}
+
+			.pokemon-statistic {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				background-color: #fff;
+
+				min-height: 43.9vh;
+				margin-top: 10px;
+
+				padding: 110px 35px 30px;
+				border-radius: 50px 50px 50px 50px;
+
+				h3 {
+					margin-bottom: 20px;
+					font-weight: 700;
+					font-style: italic;
+					font-size: 32px;
+					text-decoration: underline;
+					color: #ff5473;
+				}
+
+				ol {
+					li {
+						display: flex;
+						justify-content: space-between;
+
+						font-size: 18px;
+						line-height: 130%;
+					}
+				}
+			}
+		}
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            padding: 20px 0;
+            border-radius: 10px;
+
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background: #262835;
+        }
+
+        .btn-secondary {
+            color: #fff;
+            background: #ff5473;
+        }
+
+		@media (max-width: 420px) {
+			margin-top: 10px;
+
+			.pokemon-name {
+				h1 {
+					font-size: 20px;
+				}
+
+				h2 {
+					top: 35px;
+					font-size: 20px;
+				}
+			}
+
+			.pokemon-status {
+				position: relative;
+
+				img {
+					position: absolute;
+					top: -80px;
+					left: 0;
+					max-width: 100px;
+				}
+
+				.pokemon-statistic {
+					min-height: 57vh;
+					padding-top: 50px;
+				}
+			}
+		}
+	}
+}
