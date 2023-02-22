@@ -1,0 +1,8 @@
+<div class="container">
+    <img src="../../../../../assets/logo.png" alt="main-logo">
+    <input type="email" placeholder="Email" required  [(ngModel)]="email" (keydown.enter)="login()">
+    <input type="password" placeholder="Senha" required [(ngModel)]="password" (keydown.enter)="login()">
+    <button title="Logar" (click)="login()">Login</button>
+
+    <span *ngIf="error">{{ error }}</span>
+</div>
