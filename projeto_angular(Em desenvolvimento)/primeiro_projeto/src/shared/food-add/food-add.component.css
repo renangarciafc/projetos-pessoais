@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+section {
+    display: flex;
+}
+
+section img {
+    width: 900px;
+    height: 700px;
+}
